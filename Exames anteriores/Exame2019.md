@@ -123,9 +123,7 @@ def hill_climbing(fab, cli):
 
 # 3
 
-**3.1** 
-
-Sim, porque o jogo do galo é um problema com um espaço de estados reduzido. Por isso, um agente simples reflexo seria uma forma rápida de resolver o problema.
+**3.1** Sim, porque o jogo do galo é um problema com um espaço de estados reduzido. Por isso, um agente simples reflexo seria uma forma rápida de resolver o problema.
 De forma a implementar este problema teria numa estrutura de dados a melhor jogada a partir do estado atual. O estado atual seria constituído pelas posições das peças no tabuleiro e também a peça que identifica o agente (X ou O).
 
 **3.2** O algoritmo de pesquisa uniforme é completo e garante sempre uma solução ótima. O algoritmo A*, quando utilizado com uma heurística admissível, também garante que encontra uma solução ótima e é também completo. Como todas as soluções têm custos diferentes, então existe apenas uma solução ótima. Desta forma, ambos os algoritmos vão atingir a solução ótima.
@@ -142,9 +140,7 @@ De forma a implementar este problema teria numa estrutura de dados a melhor joga
 
 **e)** G. A pesquisa A* explora sempre primeiro os nós com menor valor de f = g + h. No caso do nó G, o valor de f é 10.
 
-**3.4** 
-
-Na aplicação do algorítmo minimax com alfa-beta prunning, a ordenação dos nós tem um forte impacto no número de cortes executados pelo algorítmo alfa-beta.  
+**3.4** Na aplicação do algorítmo minimax com alfa-beta prunning, a ordenação dos nós tem um forte impacto no número de cortes executados pelo algorítmo alfa-beta.  
 Seja b o fator de ramificação médio da árvore e d a sua profundidade: 
 Se a ordenação dos nós estiver na pior forma possível, não vai ser possível realizar quaisquer cortes alfa beta, sendo necessário visitar todos os nós da árvore (visitar b^d nós). 
 No entanto, se a ordenação dos nós gerados for feita na sua forma ótima, isto é, na forma em que o número de cortes alfa-beta é maximo, o número de nós visitados será muito menor, sendo apenas necessário visitar b^(d/2) nós, isto é, apenas cerca de metade da profundidade. 
@@ -154,10 +150,11 @@ Se a ordenação for feita de forma aleatória, o número de nós visitados pode
 
 **a)** 
 
-A -> 8
-B -> 3
-C -> <=1
-D -> 8
+* A -> 8
+* B -> 3
+* C -> <=1
+* D -> 8
+
 
 **b)** O, Q, T, U, Y
 

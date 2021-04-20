@@ -41,9 +41,11 @@ Será escolhido o S3 ou o S7.
 
 **c)** 
 
+```
 P(S2) = e^(delta/T) = e^(-8/10) = 0.449
 delta = 25 - 33 = -8
 T = 10
+```
 
 Como 0.449 < 0.55, então a S2 é rejeitada.
 
@@ -57,11 +59,14 @@ Como S3 < S1, então a solução S3 é aceite.
 
 **d)**
 
+```
 Total = 10 + 15 + 27 + 30 = 82
 P(C1) = 10 / 82 = 0.122
 P(C2) = 15 / 82 = 0.183
 P(C3) = 27 / 82 = 0.329
 P(C4) = 30 / 82 = 0.366
+```
 
 **e)**
+
 ![](images/ex_4e_2018R.png)

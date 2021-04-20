@@ -20,25 +20,25 @@
 **b)** A função pode ser o máximo de tempo gasto por uma máquina. Se um dos indivíduos usar 2 máquinas, o valor será o valor máximo de tempo gasto por uma das máquinas.
 
 Indivíduo i:
-    * M1 = 10 + 7 + 8 = 25
-    * M2 = 11 + 12 = 23
-    * Max(25,23) = 25
+  * M1 = 10 + 7 + 8 = 25
+  * M2 = 11 + 12 = 23
+  * Max(25,23) = 25
 
 Indivíduo ii:
-    * M1 = 10
-    * M2 = 11
-    * M3 = 7 + 12 + 8 = 27
-    * Max(10,11,27) = 27
+  * M1 = 10
+  * M2 = 11
+  * M3 = 7 + 12 + 8 = 27
+  * Max(10,11,27) = 27
 
 Indivíduo iii: 
-    * M1 = 10 + 7 = 17
-    * M2 = 11 + 12 + 8 = 31
-    * Max(17,31) = 31
+  * M1 = 10 + 7 = 17
+  * M2 = 11 + 12 + 8 = 31
+  * Max(17,31) = 31
 
 Indivíduo iv:
-    * M1 = 7
-    * M2 = 10 + 11 + 12 + 8 = 41
-    * Max(7,41) = 41
+  * M1 = 7
+  * M2 = 10 + 11 + 12 + 8 = 41
+  * Max(7,41) = 41
 
 **c)**  
 
@@ -73,8 +73,10 @@ Sim, uma heurística admissível não é necessariamente consistente.
 
 **c)** 
 
+```
 P(X) = e^(delta/T) = e^(0.8/-3) = 0.0235
 delta = 12 - 15 = -3
 T = 0.8
+```
 
 **f)** Baseia-se em regras de diagnóstico, uma vez que parte de efeitos observados em direção às causas desses efeitos.

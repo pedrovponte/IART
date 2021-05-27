@@ -1,0 +1,11 @@
+https://towardsdatascience.com/credit-risk-analysis-with-machine-learning-736e87e95996
+
+https://rstudio-pubs-static.s3.amazonaws.com/190551_15f6124632824534b7e397ce7ad2f2b8.html
+
+https://rstudio-pubs-static.s3.amazonaws.com/263968_5057ec1f5a2e48a89aab7f568fc37ade.html
+
+https://www.kaggle.com/hankhill2989/handling-missing-data-for-loans
+
+https://www.dataquest.io/blog/machine-learning-preparing-data/
+
+https://davidkeya.com/portfolio/Loan_Eda/

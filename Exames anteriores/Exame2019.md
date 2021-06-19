@@ -49,7 +49,7 @@ Custo: a função de custo, a qual se quer minimizar, tem valor igual à soma do
 * h2 não é admissível, uma vez que, por exemplo, no estado [1,1,1,-1,0,-1,-1], o custo para atingir a solução é apenas 1 e o custo retornado pela heurística é 5, logo sobrestimado;
 * h3 é admissível, uma vez que nunca vai sobrestimar o custo para atingir a solução ótima. Por exemplo, no estado inicial [-1,-1,-1,0,1,1,1], o custo retornado pela heurística é 6 e na realidade o custo para atingir a solução vai ser superior a 6. No caso [1,1,1,-1,0,-1,-1], a heurística retorna 0 e o custo real para atingir a solução é 1. Logo, não sobrestima os custos.
 
-**3.** Como o custo de um movimento nuca vai ser superior à distância percorrida pela peça nesse movimento, uma boa heurística seria contar o número mínimo de espaços que cada peça tem de se mover para atingir a posição correta. Para isto, podemos recorrer ao seguinte código:
+**3.** Como o custo de um movimento nunca vai ser superior à distância percorrida pela peça nesse movimento, uma boa heurística seria contar o número mínimo de espaços que cada peça tem de se mover para atingir a posição correta. Para isto, podemos recorrer ao seguinte código:
 
 ```py
 def heuristic(state):
@@ -163,3 +163,25 @@ Se a ordenação for feita de forma aleatória, o número de nós visitados pode
 **a)** Tratando-se de um problema de maximização, e como o novo valor é inferior ao valor atual, então a probabilidade de ser aceite é e^(delta(E)/T). delta(E) = 18-20 = -2. P = e^(-2/0.9) = 0,1084 = 10,84%.
 
 **b)** Tratando-se de um problema de minimização, e como o novo valor é inferior ao valor atual, então este é aceite, passando o estado atual a ser este.
+
+**3.7** O conceito de overfitting é aplicado quando o modelo que foi induzido se ajusta demasiado ao conjunto que foi utilizado para treino. Ocorre quando o modelo é muito complexo, havendo um baixo erro no conjunto de teste, mas um elevado erro no conjunto de teste.
+No caso das redes neuronais, para estas serem capazes de generalizar com base nos inputs, deve ser utilizado um número de exemplos de treino elevado, na ordem de 10 vezes o número de graus de liberdade da rede neuronal. Este elevado número de exemplos de treino vai permitir forte diversidade no conjunto de treino e, consequentemente, diminuir o grau de overffiting na rede neuronal.
+
+**3.8** Os métodos Holdout e Cross-Validation servem para estimar a performance do classificador em dados que não foram vistos anteriormente.
+O método Holdout é utilizado quando há muitos exemplos (superior a 1000), consistem em dividir 2/3 do dataset para conjunto de treino e os restantes 1/3 para conjunto de teste.
+O método cross-validation é utilizado para conjuntos de tamanho intermédio (cerca de 1000). O objetivo é dividir o dataset em k partições disjuntas. Ao utilizar k-fold cross validation, o conjunto de dados é dividido em k partições (k-folds) e em cada experiência, usa k-1 folds como conjunto de teste e a restante como conjunto de teste. Ao utilizar leave-one-out cross validation, um caso específico de k-fold em que k=N, usa, em cada iteração, N-1 exemplos para conjunto de treino e o exemplo restante para conjunto de teste.
+Assim, num conjunto com 8000 exemplos, devemos utilizar Holdout, uma vez que, devido ao elevado número de dados, cross-validation seria computacionalmente muito pesado, enquanto que num conjunto com 500 exemplo podemos já utilizar cross-validation.
+
+**3.9** 
+
+```
+Vp = 45; FN = 5; FP = 20; VN = 30
+
+accuracy = (45 + 30) / (45 + 5 + 20 + 30) = 0.75
+
+precision = 45 / (45 + 20) = 0.69
+
+sensibility = 45 / (45 + 5) = 0.9
+
+f-measure = (2 * 45) / (2 * 45 + 5 + 20) = 0.78
+

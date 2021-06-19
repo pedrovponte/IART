@@ -13,11 +13,11 @@
 ![](images/ex_1c_2017R.png)
 
 **d)** A heurística é admissível, uma vez que nunca sobrestima os custos para se chegar à solução. 
-No entanto, não é admissível, uma vez que em vários casos não se verifica que h(N) <= c(N,a,N')+h(N'). Por exemplo: 
+No entanto, não é consistente, uma vez que em vários casos não se verifica que h(N) <= c(N,a,N')+h(N'). Por exemplo: 
 * h(S) = 6 > 2 + h(A)
 * h(B) = 6 > 2 + h(D)
 
-# 3
+## 3
 
 **a)** 
 
@@ -76,6 +76,10 @@ delta < 0:
 
 **b)** Ou se escolhe sempre o estado próximo com menor valor estimado do custo para a solução (caso do algoritmo “Hill climbing”) ou, caso em que o próximo estado considerado tenha um maior custo para chegar à solução, a sua aceitação depende de uma probabilidade considerada para esse efeito (caso do  “Simulated  Annealing”).  Nos  AGs,  por  ex.,  também  se  geram  estados  seguintes  dependentes  de alguma aleatoriedade.
 
+**c)** A informação de separação serve como uma normalização, tornando o cálculo do ganho não tendencioso em virtude de existirem atributos com muitos valores possíveis e outros com poucos. Essa assimetria resultaria numa sobrevalorização dos atributos com muitos valores possíveis. Ao dividir-se pela informação de separação, normaliza-se o ganho.
+
 **d)** Raiz -> 5; Min -> <=5; Max -> 5
 
+**e)** A função de combinação aplica-se aos valores entrados em cada nó da rede e pode ser a sua soma ou o seu máximo, mínimo, etc, afetada pelos pesos dessas ligações à entrada. A função de transferência reage ao valor obtido das entradas pela função de combinação para obter um resultado que transforme esse valor de acordo, normalmente com uma função mais discriminante do tipo sigmóide sendo assim a saída.
 
+**f)** A aprendizagem supervisionada é uma aprendizagem realizada sobre um "histórico" em que os exemplos já incluem a sua classificação. Conhecemos assim todas as classes possíveis que podemos atribuir a exemplos futuros. Na aprendizagem não supervisionada não são conhecidas a priori as classes possíveis pois os exemplos passados, mesmo no caso de existirem, não estão classificados.

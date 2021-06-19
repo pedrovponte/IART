@@ -78,8 +78,43 @@ Para tornanr este algoritmo num algoritmo de pesquisa em profundidade, seria nec
 
 **5.** 
 
+## 2
 
+**1.** E(S) = -0.5 * log2(0.5) - 0.5 * log2(0.5) = 1
 
+**2.**
+
+```
+Localidade: 6I 2L
+
+Split Info = -6/8 * log2(6/8) - 2/8 * log2(2/8) = 0.811
+Gain Ratio = (1 - 0.688) / 0.811 = 0.385
+
+-----------------------
+Sexo: 4M 4F
+
+Split Info = -4/8 * log2(4/8) - 4/8 * log2(4/8) = 1
+Gain Ratio = (1 - 0.951) / 1 = 0.049
+
+-----------------------
+Idade: 2J 2A 4I
+
+Split Info = -2/8 * log2(2/8) - 2/8 * log2(2/8) - 4/8 * log2(4/8) = 1.5
+Gain Ratio = (1 - 0.655) / 1.5 = 0.230
+
+O critério escolhido para raiz da árvore é a Localidade.
+```
+
+**3.**
+
+![](imagges/../images/ex_23_2019R.png)
+
+**4.**
+
+```
+Location -> Interior: (2 + 1) / (6 + 2) = 0.375
+Location -> Litoral: (0 + 1) / (2 + 2) = 0.25
+```
 ## 3
 
 **1.**
@@ -110,13 +145,11 @@ Limite de profundidade 4
 
 **3.** A afirmação é verdadeira. A pesquisa subir a colina expande todos os nós e depois escolhe aquele que tem menor valor. No caso da pesquisa gulosa, esta também expande todos os nós e depois vai escolher aquele que apresentar menor valor. Como ambos os algoritmos utilizam a mesma heurística, então os valores para cada nó serão iguais para ambos os algoritmos, pelo que vão expandir exatamente o mesmo conjunto de nós.
 
-**4.** No algoritmo "arrefecimento dissimulado", qualquer hipótese mais afastada da solução pode ser aceite com uma probabilidade igual a e^(delta/T), em que delta é a diferença entre a avaliação das duas hipóteses e T é a temperatura atual. Como a temperatura decresce constantemente à medida que os estados vão sendo avaliados, e uma vez que a probabilidade depende diretamente do valor da tempoeratura, então, quanto menor for a temperatura, menor será a probabilidade de uma estado mais afastado da solução ser aceite.
+**4.** No algoritmo "arrefecimento dissimulado", qualquer hipótese mais afastada da solução pode ser aceite com uma probabilidade igual a e^(delta/T), em que delta é a diferença entre a avaliação das duas hipóteses e T é a temperatura atual. Como a temperatura decresce constantemente à medida que os estados vão sendo avaliados, e uma vez que a probabilidade depende diretamente do valor da temperatura, então, quanto menor for a temperatura, menor será a probabilidade de uma estado mais afastado da solução ser aceite.
 
-**5.**
-
-O indivíduo pode ser representado através de uma lista de tamanho 4, em que para cada posição contém o valor do X para o índice respetivo.
+**5.** O indivíduo pode ser representado através de uma lista de tamanho 4, em que para cada posição contém o valor do X para o índice respetivo.
 Para determinar a população inicial, poderia-se escolher aleatoriamente valores compreendidos entre 0 e 15 para cada Xi ou então utilizar uma função heurística para escolher os valores.
-Para fazer o cruzamente, poderia-se selecionar os 2 primeiros valores de X do primeiro indivíduo e os 2 ultimos valores de X do segundo indivíduo.
+Para fazer o cruzamento, poderia-se selecionar os 2 primeiros valores de X do primeiro indivíduo e os 2 últimos valores de X do segundo indivíduo.
 Para fazer a mutação, poderia-se selecionar aleatoriamente um dos valores de X e trocá-lo por um outro valor aleatório entre 0 e 15.
 
 **6.** 

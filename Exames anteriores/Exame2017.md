@@ -79,6 +79,44 @@ I3: [A,V,A,V,V]
 I4: [B,B,B,B,V]
 ```
 
+## 3
+
+**a)** 
+
+```
+Barbatana e Corpo
+
+E(S) = -4/8 * log2(4/8) - 4/8 * log2(4/8) = 1
+
+------------------
+Cauda
+
+E(S) = -4/7 * log2(4/7) - 3/7 * log2(3/7) = 0.985
+```
+
+**b)**
+
+```
+Barbatana: 4F 4L
+
+Split Info = -4/8 * log2(4/8) - 4/8 * log2(4/8) = 1
+Gain Ratio = (1 - 0.811) / 1 = 0.189
+
+-----------------
+Cauda: 2G 5P
+
+Split Info = -2/8 * log2(2/8) - 5/8 * log2(5/8) - 1/8 * log2(1/8) = 1.298
+Gain Ratio = 7/8 * (0.985 - 0.6) / 1.298 = 0.259
+
+-----------------
+Corpo: 5G 3E
+
+Split Info = -5/8 * log2(5/8) - 3/8 * log2(3/8) = 0.954
+Gain Ratio = (1 - 0.95) / 0.954 = 0.052
+
+O atributo que maximiza a razao do ganho é a Cauda.
+```
+
 ## 4
 
 **a)**

@@ -58,6 +58,43 @@ Seleciona o indivíduo ii, pois tem um valor maior.
 
 **d)** 
 
+## 3
+
+**a)** E(S) = -(4/8 * log2(4/8) + 4/8 * log2(4/8)) = 1
+
+**b)**
+
+```
+Split Infos
+
+Forma = -(0.625 * log2(0.625) + 0.375 * log2(0.375)) = 0.954
+
+Cor = -(0.75 * log2(0.75) + 0.25 * log2(0.25)) = 0.811
+
+NumOlhos = -(0.25 * log2(0.25) + 0.25 * log2(0.25) + 0.5 * log2(0.5)) = 1.5
+
+Gain Ratios
+
+Forma: (1 - 0.954) / 0.954 = 0.051
+
+Cor: (1 - 0.688) / 0.811 = 0.383
+
+NumOlhos = (1 - 0.655) / 1.5 = 0.23
+
+O atributo escolhido é a Cor.
+```
+
+**c)**
+
+![](images/ex_3c_2018R2.png)
+
+Usando uma partição {1}, {2,3} para o atributo NumEyes, podemos classificar os aliens corretamente.
+
+**d)**
+
+Green: (2+1)/(6+2) = 0.375
+Red: (0+1)/(2+2) = 0.25
+
 ## 4  
 
 **a)** A afirmação é falsa. Se uma árvore tiver várias soluções, então as soluções poderão ser diferentes.
@@ -67,3 +104,5 @@ Seleciona o indivíduo ii, pois tem um valor maior.
 **c)** 
 
 ![](images/ex_4c_2018R2.png)
+
+

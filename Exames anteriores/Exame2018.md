@@ -7,7 +7,7 @@
 **b)**
 
 * h1: é admissível uma vez que o robot necessita sempre de se deslocar pelo menos uma casa para cada objeto;
-* h2: é admissível, uma vez que o robot necessita sempre de se deslocarpelo menos uma cada para cada objeto, mesmo para aqueles que já foram recolhidos e que estão com ele;
+* h2: é admissível, uma vez que o robot necessita sempre de se deslocar pelo menos uma cada para cada objeto, mesmo para aqueles que já foram recolhidos e que estão com ele;
 * h3: não é admissível, pois para entregar 2 objetos pode haver parte do caminho em comum. Por exemplo, para a situação  R[X,Y] _ _ Y X, o custo segundo h3 é 11, mas o custo real é 6, logo sobrestima.
 * h4: é admissível, uma vez que vai subestimar o custo até ao último objeto, altura em que a estimativa será igual ao custo real.
 
@@ -77,6 +77,16 @@ Sim, uma heurística admissível não é necessariamente consistente.
 P(X) = e^(delta/T) = e^(0.8/-3) = 0.0235
 delta = 12 - 15 = -3
 T = 0.8
+```
+
+**e)**
+
+```
+P(A) = 0.5
+P(B) = 0.25
+P(C) = 0.25
+
+info(S) = -0.5 * log2(0.5) - 0.25 * log2(0.25) - 0.25 * log2(0.25) = 1.5 
 ```
 
 **f)** Baseia-se em regras de diagnóstico, uma vez que parte de efeitos observados em direção às causas desses efeitos.

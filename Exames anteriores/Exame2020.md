@@ -147,4 +147,79 @@ def simulated_annealing():
             current = next
 ```
 
+**13.** O Mundo de Wumpus não pode ser resolvido por um agente puramente reativo, pois o ambiente do mindo de Wumpus não é totalmente acessível e precisa de ser explorado. É preciso que o agente se lembre de estados anteriores, onde é que o "stench" e "breeze" estiveram, etc. Por isso, um agente reativo simples, embora, com sorte, possa resolver algumas instâncias do problema, não pode com segurança resolver o mundo do Wumpus.
 
+**14.**
+
+```
+1NN - Mesma classe que o vizinho mais próximo
+
+* Ind14 (1, 1, 3) -> NN = (1, 1, 1) -> Classe C
+* Ind15 (2, 4, 6) -> NN = (1, 3, 6) -> Classe B
+* Ind16 (5, 9, 9) -> NN = (4, 9, 8) -> Classe A
+
+3NN - Média pesada dos 3 vizinhos mais próximos (multiplicada por 1/d^2)
+
+* Ind14 (1, 1, 3)
+    * Ind13 (1, 1, 1), Classe = C, d^2 = 4
+    * Ind3 (2, 2, 5), Classe = B, d^2 = 6
+    * Ind8 (1, 3, 5), Classe = B, d^2 = 8
+
+    C -> 1/4
+    B -> 1/6 + 1/8 = 7/24
+    B > C -> Classe = B
+
+* Ind15 (2, 4, 6)
+    * Ind4 (1, 3, 6), Classe = B, d^2 = 2
+    * Ind3 (2, 2, 5), Classe = B, d^2 = 5
+    * Ind8 (1, 3, 5), Classe = B, d^2 = 3
+
+    Classe = B
+
+* Ind16(5, 9, 9)
+    * Ind9 (4, 9, 8), Classe = A, d^2 = 2
+    * Ind2 (4, 7, 8), Classe = A, d^2 = 6
+    * Ind1 (3, 8, 9), Classe = A, d^2 = 5
+
+    Classe = A
+
+```
+
+**15.**
+
+```py
+import pandas as pd
+import sklearn as sk
+from sklearn.model_selection import train_test_split
+from sklearn import neighbors
+from sklearn.svm import SVC
+
+data = pd.read_csv("data.csv")
+
+X, y = data[['dimensao', 'localizacao', 'ano_construcao', 'tipo_acabamentos']], data['tipo_para_venda']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, 0.2)
+
+knn = neighbors.KNeighborsClassifier()
+knn.fit(X_train, y_train)
+knn_prediction = knn.predict(X_test)
+knn_classification_report = classification_report(y_test, knn_prediction)
+print(knn_classification_report)
+
+svc = SVC() 
+svc.fit(X_train, y_train)
+svc_prediction = svc.predict(X_test)
+svc_classification_report = classification_report(y_test, svc_prediction)
+print(svc_classification_report)
+```
+
+**16.** P = pow(e, 5/0.5) / (pow(e, 5/0.5) + pow(e, 5/0.5) + pow(e, 1/0.5) + pow(e, 6/0.5)) = 0.11
+
+**17.** 
+
+```
+A palavra "de" aparece 5 vezes no texto.
+O texto tem 31 palavras e 27 seqências diferentes.
+
+P = (5 + 1) / (31 + 27) = 0.1
+```
